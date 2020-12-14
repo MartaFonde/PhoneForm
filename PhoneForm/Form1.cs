@@ -134,7 +134,7 @@ namespace PhoneForm
 
         private void getText()
         {
-            Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("en-US");
+           // Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("en-US");
             this.Text = Strings.tituloForm;
             btnReset.Text = Strings.borrar;
             archivoToolStripMenuItem.Text = Strings.archivo;
@@ -190,7 +190,7 @@ namespace PhoneForm
         {
             if(e.KeyChar >= '0' && e.KeyChar <= '9' || e.KeyChar == '*' || e.KeyChar == '#')
             {
-                foreach (Control c in this.Controls)
+                foreach (Control c in this.Controls)            //HASHTABLE con btn clave 1,2,3...
                 {
                     if (c is Button)
                     {
@@ -213,16 +213,20 @@ namespace PhoneForm
                 this.sv.InitialDirectory = Environment.CurrentDirectory;
                 this.sv.Filter = ".txt |*.txt|"+Strings.todosArchivos+"|*.*";
                 this.sv.ValidateNames = true;
+                sv.OverwritePrompt = false; //https://docs.microsoft.com/en-us/dotnet/api/system.windows.forms.savefiledialog.overwriteprompt?view=net-5.0
+
                 DialogResult res = sv.ShowDialog();
 
                 switch (res)
                 {
                     case DialogResult.OK:
-                        StreamWriter sw;
+
+                        StreamWriter sw;                            
                         using (sw = new StreamWriter(this.sv.FileName, true))
                         {
                             sw.WriteLine(textBox1.Text);
-                        }
+                                
+                        }                        
                         break;
                 }
             }

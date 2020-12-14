@@ -86,26 +86,26 @@ namespace PhoneForm
             // grabarNúmeroToolStripMenuItem
             // 
             this.grabarNúmeroToolStripMenuItem.Name = "grabarNúmeroToolStripMenuItem";
-            this.grabarNúmeroToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.grabarNúmeroToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
             this.grabarNúmeroToolStripMenuItem.Text = "&Grabar número";
             this.grabarNúmeroToolStripMenuItem.Click += new System.EventHandler(this.grabarNumero);
             // 
             // resetToolStripMenuItem
             // 
             this.resetToolStripMenuItem.Name = "resetToolStripMenuItem";
-            this.resetToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.resetToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
             this.resetToolStripMenuItem.Text = "&Borrar";
             this.resetToolStripMenuItem.Click += new System.EventHandler(this.btnReset_Click);
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(177, 6);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(151, 6);
             // 
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
             this.salirToolStripMenuItem.Text = "&Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
@@ -124,6 +124,7 @@ namespace PhoneForm
             this.Controls.Add(this.btnReset);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.menuStrip1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.MainMenuStrip = this.menuStrip1;
